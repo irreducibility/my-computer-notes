@@ -5,7 +5,7 @@ SSH Notes
 ```
     Options:
     	-4  Force ipv4 connection
-	-6  Force ipv6 connection
+	    -6  Force ipv6 connection
         -i  Identity file
         -p  port number on which server is
             listening
@@ -13,8 +13,8 @@ SSH Notes
         -X  for using gui applications on the
             server
         -C  request compression
-	-N  do not execute remote command
-	-q  supress dignostic messages
+    	-N  do not execute remote command
+    	-q  supress dignostic messages
 ```
 
 ## Connect to ssh server
@@ -87,11 +87,11 @@ From localhost to remote server
 
 ## Read More
 
-- [ssh remote port forwarding](ssh-dir/ssh-remote-port-forwarding)
-- [ssh local port forwarding](ssh-dir/ssh-local-port-forwarding)
-- [ssh keygen](ssh-dir/ssh-keygen)
-- [socks proxy](ssh-dir/ssh-socks-proxy)
-- [transfer files](ssh-dir/ssh-files-transfer)
+- [ssh port forwarding and tunneling](ssh-dir/ssh-port-forwarding-and-tunnels.md)
+- [ssh keygen](ssh-dir/ssh-keygen.txt)
+- [socks proxy](ssh-dir/ssh-socks-proxy.md)
+- [transfer files](ssh-dir/ssh-file-transfer.md)
+- [ssh jump hosts and proxy command](ssh-dir/ssh-host-jump-and-proxy-command.md) 
 
 ## Further Reading
 - https://www.redhat.com/sysadmin/ssh-proxy-bastion-proxyjump

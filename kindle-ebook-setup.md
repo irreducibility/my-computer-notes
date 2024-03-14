@@ -2,10 +2,11 @@ Kindle Setup (KT3 8th gen)
 ==========================
 
 ## Kual extensions:
-- [koreader](kindle/koreader): ebook reader application.
+- [koreader](kindle/koreader.md): ebook reader application.
 - kterm : a terminal emulator.
 - usbnetwork : enables networking over usb/wifi.
 - screensavers : custom screen savers.
+
 ```
     Files are saved in:
     /mnt/us/linkss
