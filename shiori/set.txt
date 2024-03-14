@@ -1,0 +1,1 @@
+wget --header="User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0" --header="Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8" --header="Accept-Encoding: gzip, deflate" --header="Cookie: GMT_OFFSET=330; session-id=4c63a459-6d2a-4f23-9070-9325200b49b8" localhost:8080/api/bookmarks

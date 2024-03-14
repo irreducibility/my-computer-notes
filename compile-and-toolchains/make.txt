@@ -1,0 +1,8 @@
+make --trace:
+	to show commands run by make.
+
+./configure LDFLAGS="-Wl,--allow-shlib-undefined" CFLAGS="-mandroid -fomit-fra
+me-pointer --sysroot /home/george/my-android-toolchain/sysroot"  --host=arm-li
+nux-androideabi --build=x86_64-linux-gnu --enable-shared --prefix="/data/local
+/tmp" --disable-ipv6 
+

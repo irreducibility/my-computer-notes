@@ -1,0 +1,39 @@
+#nodes with 128 core cpus
+s002-n006
+s002-n005
+
+
+details:
+========
+s002-n006
+     state = free
+     power_state = Running
+     np = 2
+     properties = xeon,icx,gold6348,ramgb,netgbe,jupyter,batch
+     ntype = cluster
+     status = rectime=1664596553,macaddr=b4:96:91:a8:8d:fc,cpuclock=Fixed,varattr=,jobs=,state=free,netload=184488847499,gres=,loadave=0.03,ncpus=128,physmem=263802732kb,availmem=262293132kb,totmem=265899880kb,idletime=135713,nusers=2,nsessions=2,sessions=1453 1887,uname=Linux s002-n006 5.4.0-89-generic #100-Ubuntu SMP Fri Sep 24 14:50:10 UTC 2021 x86_64,opsys=linux
+     mom_service_port = 15002
+     mom_manager_port = 15003
+
+s002-n001
+     state = job-exclusive
+     power_state = Running
+     np = 2
+     properties = xeon,icx,gold6348,ramgb,netgbe,jupyter,batch
+     ntype = cluster
+     jobs = 0-1/1997401.v-qsvr-1.aidevcloud
+     status = rectime=1664596726,macaddr=b4:96:91:a8:7e:bc,cpuclock=Fixed,varattr=,jobs=1997401.v-qsvr-1.aidevcloud(cput=281166,energy_used=0,mem=18096kb,vmem=4352052kb,walltime=4402,session_id=3872609),state=free,netload=16169070273839,gres=,loadave=64.03,ncpus=128,physmem=263802680kb,availmem=261511392kb,totmem=265899828kb,idletime=136854,nusers=3,nsessions=3,sessions=3786408 3787022 3872609,uname=Linux s002-n001 5.4.0-90-generic #101-Ubuntu SMP Fri Oct 15 20:00:55 UTC 2021 x86_64,opsys=linux
+     mom_service_port = 15002
+     mom_manager_port = 15003
+
+s002-n005
+     state = free
+     power_state = Running
+     np = 2
+     properties = xeon,icx,gold6348,ramgb,netgbe,jupyter,batch
+     ntype = cluster
+     status = rectime=1664596843,macaddr=b4:96:91:a8:7e:84,cpuclock=Fixed,varattr=,jobs=,state=free,netload=4466813568,gres=,loadave=0.02,ncpus=128,physmem=263762732kb,availmem=263199920kb,totmem=265859880kb,idletime=237149,nusers=2,nsessions=2,sessions=1453 1881,uname=Linux s002-n005 5.4.0-89-generic #100-Ubuntu SMP Fri Sep 24 14:50:10 UTC 2021 x86_64,opsys=linux
+     mom_service_port = 15002
+     mom_manager_port = 15003
+
+

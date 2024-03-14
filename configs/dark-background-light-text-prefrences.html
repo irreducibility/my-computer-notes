@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Dark bg &amp; Light text preferences</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="">
+    <link rel="stylesheet" href="dark-background-light-text-prefrences_files/bootstrap.css">
+    <link rel="stylesheet" href="dark-background-light-text-prefrences_files/internal.css">
+    <link rel="icon" type="image/png" href="moz-extension://e289e9c8-d5df-4e5d-9e5f-02be1a91a739/icons/icon64.png">
+    <style>
+        .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12 {
+            /*bootstrap grid-only build fix*/
+            box-sizing: border-box;
+        }
+
+        select,
+        input[type="color"] {
+            height: calc(2.2em + 2px);
+        }
+
+        input[type="checkbox"] {
+            height: calc(2.2em - 2px);
+            margin: 0;
+        }
+
+        .full-width {
+            width: 100% !important;
+        }
+        input[type="color"] {
+            padding: 0.15em;
+        }
+        .input_color_text {
+            text-transform: uppercase;
+        }
+        .configured_page_url {
+            word-break: break-all;
+        }
+        h2 {
+            margin: 0;
+            font-weight: normal;
+        }
+        .row {
+            margin-top: 1em;
+        }
+        @media (min-width: 768px) {
+            h2 {
+                margin: 0.5rem;
+            }
+            .row {
+                margin-top: 0.2em;
+            }
+        }
+
+        #grab-overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #00000080;
+            padding: 3em;
+            z-index: 1;
+        }
+        #grab-overlay h1 {
+            font-size: 5em;
+            font-weight: normal;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+        .blurred {
+            filter: blur(10px);
+        }
+        .note {
+            margin: 0.5em;
+        }
+        .i_sign {
+            font-size: 2.5em;
+        }
+        .note_list {
+            margin: 0;
+            padding-left: 0.5em;
+            list-style: none;
+        }
+    </style>
+    <script src="dark-background-light-text-prefrences_files/preferences.js"></script>
+    <!--<script type="text/javascript">-->
+        <!--window.setTimeout(function(){-->
+            <!--var placeholder = document.getElementById('loading-or-error-placeholder');-->
+            <!--if (placeholder) {-->
+                <!--placeholder.textContent = 'Error. You should not see this';-->
+            <!--}-->
+        <!--}, 3000);-->
+    <!--</script>-->
+<style id="base-extension-style">
+:root {
+  --dark-background-light-text-add-on-foreground-color: #cccccc !important;
+  --dark-background-light-text-add-on-background-color: #1E1E1E !important;
+  --dark-background-light-text-add-on-link-color: #7fd7ff !important;
+  --dark-background-light-text-add-on-visited-color: #ffafff !important;
+  --dark-background-light-text-add-on-active-color: #ff0000 !important;
+  --dark-background-light-text-add-on-selection-color: #8080ff !important;
+}
+
+html {
+  background-color: #1E1E1E;
+  color: #cccccc;
+}
+
+*:link,
+*:link * {
+  color: #7fd7ff !important;
+}
+
+*:visited,
+*:visited * {
+  color: #ffafff !important;
+}
+
+input[type="range"] {
+  -moz-appearance: none;
+}
+
+button,
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]),
+textarea,
+select,
+[contenteditable="true"] {
+  -moz-appearance: none !important;
+  color: #cccccc !important;
+  background-color: #1E1E1E;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: #cccccc;
+  border-style: solid;
+  transition-duration: 0.3s;
+  transition-property: border-color, box-shadow;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="button"]):not([type="color"]):not([type="image"]):not([type="reset"]):not([type="submit"]),
+textarea,
+[contenteditable="true"] {
+  background-image: none !important;
+}
+
+input:focus:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="file"]):not([type="button"]):not([type="color"]):not([type="image"]):not([type="reset"]):not([type="submit"]),
+textarea:focus,
+[contenteditable="true"]:focus {
+  box-shadow: inset 0 0 0.15em 0.15em #8080ff !important;
+  border-color: #8080ff !important;
+}
+
+button,
+input[type="button"],
+input[type="color"],
+input[type="image"],
+input[type="reset"],
+input[type="submit"],
+select {
+  box-shadow: 0 0 0.15em 0.15em transparent !important;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="color"]:focus,
+input[type="image"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+select:focus {
+  box-shadow: 0 0 0.15em 0.15em #8080ff !important;
+  border-color: #8080ff !important;
+}
+
+select {
+  background-image: url('data:image/svg+xml;utf8,<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" width="500" height="500"><path stroke="%23cccccc" fill="transparent" stroke-width="40" d="M 100 175 L 250 350 L 400 175"/></svg>') !important;
+  background-position: right center !important;
+  background-repeat: no-repeat !important;
+  padding-right: 1em !important;
+  background-size: 1em !important;
+}
+
+*::-moz-selection {
+  color: #cccccc !important;
+  background: #8080ff !important;
+  text-shadow:
+    #1E1E1E 0 0 1pt,
+    #1E1E1E 0 0 2pt,
+    #1E1E1E 0 0 3pt,
+    #1E1E1E 0 0 4pt,
+    #1E1E1E 0 0 5pt,
+    #1E1E1E 0 0 5pt,
+    #1E1E1E 0 0 5pt !important;
+}
+
+img[alt="inline_formula"],
+.mwe-math-fallback-image-inline,
+.highcharts-container {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+.catalog-content .i-checkbox__faux::before {
+  filter: invert(1);
+}
+#gs_bdy .gsc_g_a[style*="height"] {
+  background-color: rgb(119, 119, 119) !important;
+}
+
+.awradio label::after {
+  background-color: #cccccc !important;
+}
+.jfk-button-img {
+  filter: invert(1);
+}
+
+#kix-current-user-cursor-caret[style*="border-color: rgb(0, 0, 0)"] {
+  border-color: #cccccc !important;
+}
+</style></head>
+<body>
+<div class="hidden" id="grab-overlay">
+    <h1 id="grab-hotkey">Ctrl+Shift+D</h1>
+    <table class="note">
+        <tbody><tr>
+            <td>
+                <span class="i_sign">ⓘ</span>
+            </td>
+            <td>
+                <ul class="note_list">
+                    <li>
+                        When <strong>valid</strong> hotkey is pressed, this dialog will be closed and hotkey will be applied
+                    </li>
+                    <li>
+                        Refer to <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json/commands#Shortcut_values">this page</a> to learn what is valid hotkey
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody></table>
+    <button class="full-width" id="grab-stop">Cancel</button>
+</div>
+<div class="container-fluid" id="main"><div class="row"><div class="col-xs-12"><h2>Options</h2></div></div><div class="row"><div class="col-xs-10 col-sm-4 col-md-4"><label class="full-width" for="labeled_pref_enabled">Enabled</label></div><div class="col-xs-2 col-sm-4 col-md-6"><input class="pref_enabled full-width form-control" id="labeled_pref_enabled" type="checkbox" data-pref-type="bool" checked="checked"></div><div class="col-xs-12 col-sm-4 col-md-2"><button class="btn btn-default full-width">Reset</button></div></div><div class="row"><div class="col-xs-12 col-sm-12 col-md-4"><label class="full-width" for="labeled_pref_default_method">Default method of changing page colors</label></div><div class="col-xs-12 col-sm-8 col-md-6"><select class="pref_default_method full-width form-control" id="labeled_pref_default_method" data-pref-type="menulist"><option>Disabled</option><option selected="selected">Stylesheet processor</option><option>Simple CSS</option><option>Invert</option></select></div><div class="col-xs-12 col-sm-4 col-md-2"><button class="btn btn-default full-width">Reset</button></div></div><div class="row"><div class="col-xs-12 col-sm-12 col-md-4"><label class="full-width" for="labeled_pref_default_foreground_color">Default foreground color</label></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_color pref_default_foreground_color full-width form-control" id="labeled_pref_default_foreground_color" data-pref-type="color" type="color" value="#cccccc"></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_text pref_default_foreground_color full-width form-control" data-pref-type="color" type="text" value="#cccccc"></div><div class="col-xs-12 col-sm-4 col-md-2"><button class="btn btn-default full-width">Reset</button></div></div><div class="row"><div class="col-xs-12 col-sm-12 col-md-4"><label class="full-width" for="labeled_pref_default_background_color">Default background color</label></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_color pref_default_background_color full-width form-control" id="labeled_pref_default_background_color" data-pref-type="color" type="color" value="#1e1e1e"></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_text pref_default_background_color full-width form-control" data-pref-type="color" type="text" value="#1E1E1E"></div><div class="col-xs-12 col-sm-4 col-md-2"><button class="btn btn-default full-width">Reset</button></div></div><div class="row"><div class="col-xs-12 col-sm-12 col-md-4"><label class="full-width" for="labeled_pref_default_link_color">Default link color</label></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_color pref_default_link_color full-width form-control" id="labeled_pref_default_link_color" data-pref-type="color" type="color" value="#7fd7ff"></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_text pref_default_link_color full-width form-control" data-pref-type="color" type="text" value="#7fd7ff"></div><div class="col-xs-12 col-sm-4 col-md-2"><button class="btn btn-default full-width">Reset</button></div></div><div class="row"><div class="col-xs-12 col-sm-12 col-md-4"><label class="full-width" for="labeled_pref_default_visited_color">Default visited link color</label></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_color pref_default_visited_color full-width form-control" id="labeled_pref_default_visited_color" data-pref-type="color" type="color" value="#ffafff"></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_text pref_default_visited_color full-width form-control" data-pref-type="color" type="text" value="#ffafff"></div><div class="col-xs-12 col-sm-4 col-md-2"><button class="btn btn-default full-width">Reset</button></div></div><div class="row"><div class="col-xs-12 col-sm-12 col-md-4"><label class="full-width" for="labeled_pref_default_active_color">Default active link color</label></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_color pref_default_active_color full-width form-control" id="labeled_pref_default_active_color" data-pref-type="color" type="color" value="#ff0000"></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_text pref_default_active_color full-width form-control" data-pref-type="color" type="text" value="#ff0000"></div><div class="col-xs-12 col-sm-4 col-md-2"><button class="btn btn-default full-width">Reset</button></div></div><div class="row"><div class="col-xs-12 col-sm-12 col-md-4"><label class="full-width" for="labeled_pref_default_selection_color">Default selection color</label></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_color pref_default_selection_color full-width form-control" id="labeled_pref_default_selection_color" data-pref-type="color" type="color" value="#8080ff"></div><div class="col-xs-6 col-sm-4 col-md-3"><input class="input_color input_color_text pref_default_selection_color full-width form-control" data-pref-type="color" type="text" value="#8080ff"></div><div class="col-xs-12 col-sm-4 col-md-2"><button class="btn btn-default full-width">Reset</button></div></div><div class="row"><div class="col-xs-10 col-sm-4 col-md-4"><label class="full-width" for="labeled_pref_do_not_set_overrideDocumentColors_to_never">Do not set "Override Document Colors" to "never" (not recommended)</label></div><div class="col-xs-2 col-sm-4 col-md-6"><input class="pref_do_not_set_overrideDocumentColors_to_never full-width form-control" id="labeled_pref_do_not_set_overrideDocumentColors_to_never" type="checkbox" data-pref-type="bool"></div><div class="col-xs-12 col-sm-4 col-md-2"><button class="btn btn-default full-width">Reset</button></div></div><div class="row"><div class="col-xs-12"><h2>Shortcuts</h2></div></div><div>In
+ order to configure shortcuts, go to about:addons (Menu -&gt; Add-ons), 
+press on the cogwheel icon, then choose "Manage Extension Shortcuts"</div><a href="https://support.mozilla.org/kb/manage-extension-shortcuts-firefox">See this support article for the detais</a><div class="row"><div class="col-xs-12"><h2>Configured pages</h2></div></div><div class="row configured_page"><div class="col-xs-12">There is no single configured page</div></div></div>
+
+
+</body></html>

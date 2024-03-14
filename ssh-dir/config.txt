@@ -1,0 +1,25 @@
+#SendEnv  LC_*  LANG*
+#Include config.d/*
+
+# added for persistant ssh connection
+#ServerAliveInterval 120
+#ServerAliveCountMax 40
+
+# include config files from ~/.ssh/config.d
+#Include config.d/github.conf
+
+Host <name> 
+	Hostname <address>
+	User <username>
+	Port 22
+	#PreferredAuthentications password
+	#PubkeyAuthentication no
+	#ProxyJump <jump host>
+	#ProxyCommand nc -x 127.0.0.1:9050 %h %p
+	#IdentityFile ~/.ssh/config.d/seg.key
+	#IdentitiesOnly yes
+	#SetEnv Value
+	#StrictHostKeyChecking no
+	#UserKnownHostsFile /dev/null
+	#LogLevel QUIET, FATAL, ERROR, INFO, 
+		#VERBOSE, DEBUG, DEBUG1, DEBUG2, and DEBUG3.

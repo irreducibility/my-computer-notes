@@ -1,0 +1,5 @@
+Further Reading
+===============
+
+https://superuser.com/questions/231920/forwarding-audio-like-x-in-ssh/311830#311830
+https://superuser.com/questions/605445/how-to-stream-my-gnu-linux-audio-output-to-android-devices-over-wi-fi << 2nd answer

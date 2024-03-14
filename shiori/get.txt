@@ -1,0 +1,1 @@
+curl -H "Content-Type: application/json" -d '{"key": "X-Session-Id", "type": "text", "value": "01366a75-f62e-41b6-96a6-7ed2dd2c242a" }' localhost:8080/api/bookmarks

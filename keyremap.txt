@@ -1,0 +1,10 @@
+https://askubuntu.com/questions/296155/how-can-i-remap-keyboard-keys
+ate 0x8, keycode 108 (keysym 0xffea, Alt_R), same_screen YES,
+
+  root 0x7c4, subw 0x0, time 989235, (435,191), root:(1296,647),
+    state 0x0, keycode 40 (keysym 0x64, d), same_screen YES,
+    XLookupString gives 1 bytes: (64) "d"
+    XFilterEvent returns: False
+
+
+xmodmap -e "keycode 108 = d"

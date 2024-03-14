@@ -1,0 +1,4 @@
+	api.amazon.com
+	device-messaging-na.amazon.com
+	kca.amazon.com
+	todo-ta-g7g.amazon.com

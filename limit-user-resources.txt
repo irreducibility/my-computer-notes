@@ -1,0 +1,5 @@
+Limit Resource Usage
+====================
+
+- taskset-restrict-processes-to-desired-cpu-cores.md
+- check /etc/security/limits.conf

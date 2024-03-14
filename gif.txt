@@ -1,0 +1,1 @@
+ gifsicle -O3 --colors=64 --use-col=web --lossy=100 --scale 0.8  6.gif -o 6-.gif

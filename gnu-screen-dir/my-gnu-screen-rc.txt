@@ -1,0 +1,32 @@
+# Created By George 2023 OCT 2023
+# It's a really good screenrc 
+# Turn off startup message
+startup_message off
+
+# HARD STATUS CONFIGURATION
+# https://www.gnu.org/software/screen/manual/html_node/String-Escapes.html
+# %{= W} set white forground with no background
+# %{= bW} set white forground in blue background
+# %n show number of screen window 
+# %{-} reset to first set color
+# %{+b g}%w bold green foreground and show window
+# %= pad space 
+# %{+b kg} bold green on black background.
+# hardstatus alwayslastline "%{= W}%{= bW} %n %{-} %{+b g}%w %= %{+b kg}%C%A %M %d %{= bW} %1` "
+# backtick
+backtick 1 30 30 /home/george/.local/bin/BAT-screen.sh
+shelltitle '$ | bash'
+
+# status green theme
+# hardstatus alwayslastline "%{= W}%{= bW} %n %{-} %{+b g}%w %L= %-24= %{+b kg}%C %A %M %d %{bW} %1` "
+
+# status green theme 2
+# hardstatus alwayslastline "%{= W}%{+b g} %-w%{kg}%50> %n*%t %{-}%+w%-28< %= %{kg}%C%A %M %d %{bW} %1` "
+hardstatus alwayslastline "%{= W} %{+b g} %-w%{kg}%50> %n*%t %{-}%+w%-28< %= %{kg}%C%A %M %d %{bW} %1` "
+
+# status blue theme
+# hardstatus alwayslastline "%{= W}%{+b b} %-w%{bw}%50> %n*%t %{-}%+w%-28< %= %{bw}%C%A %M %d %{bW} %1` "
+
+# KEY MAP
+# Unbind x logout 
+bind x

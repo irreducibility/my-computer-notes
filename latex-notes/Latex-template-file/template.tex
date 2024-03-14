@@ -1,0 +1,38 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm} %for theorems
+\usepackage{hyperref} %for links in tableofcontents and index
+\usepackage{imakeidx} %for index
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,    
+    urlcolor=cyan,
+}
+
+\makeindex %start indexing
+
+\numberwithin{equation}{section} %for giveing number of equation by section
+
+\numberwithin{equation}{section}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[thm]{Definition}
+\newtheorem*{remark}{Remark}
+
+
+\title{}
+\date{}
+
+\begin{document}
+	\tableofcontents %for table of contents
+
+	\printindex %for indexing on last page
+\end{document}

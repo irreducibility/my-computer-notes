@@ -1,0 +1,11 @@
+------------------------------------------------------------ 
+			Jekyll
+------------------------------------------------------------
+Jekyll:
+	resource:
+	https://jekyllrb.com/docs/
+
+Jekyll begin:
+	to start building a website use the following:
+
+	$ jeykll ne

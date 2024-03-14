@@ -1,0 +1,14 @@
+------------------------------------------------------------
+			SSH KEYGEN
+------------------------------------------------------------
+
+	+options: -t 	dsa | ecdsa | ecdsa-sk | ed25519 | 
+			ed25519-sk | rsa
+		  -f	specify the filename for id_key		
+		  -C	provide comment (like user on the 
+			public key)
+
+	To generate a keypair use
+		$ssh-keygen -f filename -t rsa -C ""
+		 #for with blank comment
+------------------------------------------------------------

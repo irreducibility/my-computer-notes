@@ -1,0 +1,6 @@
+useradd sshtunnel -m -d /home/sshtunnel -s /bin/true
+https://unix.stackexchange.com/questions/14312/how-to-restrict-an-ssh-user-to-only-allow-ssh-tunneling
+
+portmap.io : 1 tunnel per free user
+localhost.run: only for http
+https://superuser.com/questions/708962/ssh-port-forwarding-service
